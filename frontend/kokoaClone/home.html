@@ -9,23 +9,26 @@
             margin: 50px;
         }
         span {
-            background-color: tomato; 
+            background-color: yellowgreen;
+            padding: 5px;
+            border-radius: 10px;
         }
-        span:nth-child(3n + 1){
-            background-color: teal;
+        input {
+            border:1px solid wheat;
+        }
+        input:required {
+            border:tomato;
+        }
+        input[placeholder~="name"] {
+            background-color: pink;
         }
     </style>
 </head>
 <body>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
+    <div>
+        <input type="text" placeholder="First name" />
+        <input type="text" placeholder="Last name" />
+        <input type="password" required placeholder="password" />
+    </div>
 </body>
 </html>
