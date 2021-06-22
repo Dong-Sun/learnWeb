@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>The Nico Times</title>
     <style>
+        :root {
+            --main-color: #fcce00;
+            --default-border: 1px solid var(--main-color);
+        }
         body {
             height: 1000vh;
             margin: 50px;
@@ -13,22 +17,23 @@
             padding: 5px;
             border-radius: 10px;
         }
-        input {
-            border:1px solid wheat;
+        form {
+            border: 1px solid salmon;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
         }
-        input:required {
-            border:tomato;
+        form:hover input:focus {
+            background-color: sienna;
         }
-        input[placeholder~="name"] {
-            background-color: pink;
+        input::placeholder {
+            color: var(--main-color);
         }
     </style>
 </head>
 <body>
-    <div>
-        <input type="text" placeholder="First name" />
-        <input type="text" placeholder="Last name" />
-        <input type="password" required placeholder="password" />
-    </div>
+    <form>
+        <input type="text" placeholder="Name"/>
+    </form>
 </body>
 </html>
